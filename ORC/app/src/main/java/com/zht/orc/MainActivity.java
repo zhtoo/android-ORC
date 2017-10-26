@@ -105,6 +105,8 @@ public class MainActivity extends Activity {
             }
 
         });
+
+       UnZipUtil.unzipFile(this);
     }
 
 
@@ -181,6 +183,8 @@ public class MainActivity extends Activity {
 
 
     public String doOcr(Bitmap bitmap, String language) {
+
+
         baseApi.init(UnZipUtil.dstPath(getApplication())+File.separator, language);
 
         bitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
